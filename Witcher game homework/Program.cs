@@ -37,7 +37,7 @@ if (usrinput == "GO")
             int  healht = playerhealth - BossAttackDmg;
             Console.WriteLine($"David ta trafil do gebule, ostalo ti {healht} HP");
             break;
-            if (usrinput == "A")
+            int i = 90;
 
 
             {
