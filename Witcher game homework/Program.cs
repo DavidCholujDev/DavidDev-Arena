@@ -90,7 +90,7 @@ if (usrinput == "GO")
     if (Kaput = true)
     {    
         Console.WriteLine("Nasiel si noveho bossa po ceste do skoly, ak sa chces dostat do skoly musis Bossa porazit");
-        Console.WriteLine("inventar otvoris pismenom E, ak chces item pouzit napis jeho meno, ak nechces otvorit inventar napis pismeno N");
+        Console.WriteLine("inventar otvoris pismenom E, ak chces item pouzit napis jeho meno");
         string inventoryaccess = Console.ReadLine();
     
     // ak chce pouzit item z invu
@@ -201,60 +201,42 @@ if (usrinput == "GO")
             }
             
 
+   
             
             
-            
-            // treti typ utoku na gabel
-            while (usrinput == "A")
-            {
-                int damage = 45;
-                int GabelHealth = GabelHealthMax - damage;
-                int playerHealth = PlayerHPMax - GabelAttackDmg;
-                Console.WriteLine($"Zautocil si na Gabla, ostry kraj tvojej 'Coding Keyboard of David Developer' mu porezal izolaciu, teraz ma {GabelHealth} HP");
-                Console.WriteLine("Gabel - Au, MOJA IZOLACIA, TOTO OLUTUJES AAGH!");
-                Console.WriteLine("Gabel ti dal pravy hak do brady");
-                int PlayerHPAfterGabelAttack = playerHealth;
-                Console.WriteLine($" Ty = {PlayerHPAfterGabelAttack} HP    Gabel = {GabelHealth} HP ");
-                Console.WriteLine("Gabel stale nieje mrtvy, MUSIS HO ZMLATIT! Vyber svoj utok podla predoslej moznosti");
-                usrinput = Console.ReadLine();
-                // nasledovne utoky na Gabla
-                      
-                if (usrinput == "D")
-                {
-                    damage = 129;
-                    int GabelHealthA = GabelHealth - damage;
-                    if (GabelHealthA <= 0)
-                    {
-                        Console.WriteLine("Gabel - AAGH! Porazil si ma, ziskavas moj siroky medeny kabel, ic do skoly");
-                        inventory.Add("Gabel's ultra wide thick copper cable");
-                        GabelKaput = true;
-
-                    }
-                    
-                }
-                
-                
-                if (usrinput == "W")
-                {
-                    damage = 86;
-                    int GabelHealthA = GabelHealth - damage;
-                    Console.WriteLine($"GABEL JE SKORO MRTVY! UZ MA LEN {GabelHealthA} HP       TY = {playerHealth}");
-                    Console.WriteLine("Gabel ti vrazil celou silou");
-                    int playerHealthAfterAttack = playerHealth - GabelAttackDmg;
-                    Console.WriteLine("Gabel ta zabil, porazil si 1 monstrum");
-                    GabelKaput = false;
-                    
-
-                
+           
                 }
 
                  
             }
             
         }
-    }
 
+
+if (GabelKaput = true)
+{
+
+    Console.WriteLine("Tvoja Ucitelka dejepisu - Ahoj, ides odpovedat - musis odpovedat na jej otazky spravne aby si ju porazil a dostal sa domov");
+    Console.WriteLine("Tvoja ucitelka dejepisu - Kedy skoncila druha svatova vojna, staci rok");
+    usrinput = Console.ReadLine();
+
+    if (usrinput == "1945")
+    {
+        Console.WriteLine("Tvoja ucitelka dejepisu - Dobra odpoved, pokracujeme - Kedy sa narodil Adolf Hitler, staci rok");
+        usrinput = Console.ReadLine();
+
+        if (usrinput == "1889")
+        {
+            Console.WriteLine("Tvoja  ucitelka dejepisu  - Spravne, uz sa mi prestava pacit ze to mas spravne, teraz ti dam narocnu otazku - Kedy zomrel Kristus nas pan ");
+            usrinput = Console.ReadLine();
+            if (usrinput == "33")
+            {
+                Console.WriteLine("Tvoja Ucitelka Dejepisu - AAHG!!! SI AZ MOC DOBRY NA MNA PORAZIL SI MA AAGH!!! VYPADNI MI DOMOV Z OCI AAGH");
+                Console.WriteLine("Mozes ist domov, vyhral si moju hru, dakujem ti kolega");
+            }
+        }
     }
+}
 
 
 
